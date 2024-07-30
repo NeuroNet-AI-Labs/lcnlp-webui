@@ -41,16 +41,23 @@ LcNLP Launcher provides a user-friendly web interface powered on Flask framewor,
 
 ## Changelogs
 
-## v1.1.0
+## v1.2.1
 
-## Enhancements:
+## Generating text in several steps:
 
-- Added a section to display the currently selected model and device above the chat.
-- Implemented functionality to persist selected model and device settings across page reloads using local storage.
-- Added a "Clear Chat" button to allow users to quickly clear the chat history.
-## Bug Fixes:
+Added context-sensitive processing of large texts. The model generates text in chunks, storing part of the previous output for the next request to handle long contexts.
+## Request management:
 
-- Fixed minor styling adjustments for better visual consistency
+- The manage_requests method allows you to send multiple requests at intervals,
+- which can be useful for testing or performing multiple generations of text.
+##Context-aware text generation:
+
+- The generate_text method adds logic to save some of the previous output and use it in the next request, which helps preserve context.
+Fix bugs:
+
+- Fixed a bug with model selection.
+
+---
 
 ## System Requirements
 

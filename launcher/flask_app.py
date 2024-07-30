@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from launcher.generators.ai.nlp_gen_v1 import AdvancedTextGenerator
+from launcher.generators.ai.nlp_gen_v2 import AdvancedTextGenerator
 from launcher.utils.devices.device_manager import DeviceManager
 
 app = Flask(__name__)
