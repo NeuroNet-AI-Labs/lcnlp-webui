@@ -1,12 +1,12 @@
-# LcNLP Launcher
+# LcNLP WebUI Launcher
 
-**LcNLP Launcher** (Local Natural Language Processing Launcher) is a powerful and intuitive tool designed for managing, configuring, and launching various NLP models locally. This launcher simplifies the process of working with state-of-the-art text generation models, making it accessible for both beginners and advanced users.
+**LcNLP WebUI Launcher** (Local Natural Language Processing WebUI Launcher) is a powerful and intuitive tool designed for managing, configuring, and launching various NLP models locally with web interface powered on Flask framework. This launcher simplifies the process of working with state-of-the-art text generation models, making it accessible for both beginners and advanced users.
 
 ---
 
 ## Description
 
-LcNLP Launcher provides a web user-friendly interface for setting up and running NLP models such as gpt2, gpt2-XL, and more. With LcNLP Launcher, you can:
+LcNLP Launcher provides a user-friendly web interface powered on Flask framewor, for setting up and running NLP models such as gpt2, gpt2-XL, and more. With LcNLP Launcher, you can:
 
 - Easily configure model parameters and settings.
 - Launch and monitor NLP models locally.
