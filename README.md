@@ -41,37 +41,16 @@ LcNLP Launcher provides a web user-friendly interface for setting up and running
 
 ## Changelogs
 
-## v1.0.0
+## v1.1.0
 
-## Web User Interface:
+## Enhancements:
 
-- Developed an intuitive web-based interface for easy interaction and configuration of NLP models.
-## Model Management:
+- Added a section to display the currently selected model and device above the chat.
+- Implemented functionality to persist selected model and device settings across page reloads using local storage.
+- Added a "Clear Chat" button to allow users to quickly clear the chat history.
+## Bug Fixes:
 
-- Support for multiple NLP models including gpt2, gpt2-medium, gpt2-large, gpt2-xl, EleutherAI/gpt-neo series, and distilgpt2.
-## Device Selection:
-
-- Ability to choose between available devices (CPU or CUDA) for model inference.
-## Parameter Configuration:
-
-- Added configurable parameters for model generation:
-- Temperature: Control the creativity of the generated text.
-- Top-k: Limit the number of highest probability options for the next word.
-- Top-p (nucleus sampling): Limit the selection of words by cumulative probability.
-- Repetition Penalty: Penalize repeated words to reduce redundancy.
-- Max Length: Specify the maximum number of tokens in the generated text.
-## Real-time Logs and Outputs:
-
-- View real-time logs and outputs from the models directly within the interface.
-## Chat Interface:
-
-- Interactive chat interface for sending prompts and receiving responses from the model.
-## Settings Modal:
-
-- Integrated settings modal to easily adjust configuration parameters.
-## Loading Indicator:
-
-- Visual indicator to show when the model is processing a prompt.
+- Fixed minor styling adjustments for better visual consistency
 
 ## System Requirements
 

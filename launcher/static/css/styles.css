@@ -24,7 +24,8 @@ body {
 .header {
     background-color: #2e2e2e;
     padding: 10px;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header button {
@@ -38,6 +39,16 @@ body {
 
 .header button:hover {
     background-color: #5e5e5e;
+}
+
+.info {
+    background-color: #2e2e2e;
+    padding: 10px;
+    color: #ffffff;
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .chat {
@@ -88,6 +99,14 @@ body {
 
 #send-button:active {
     background-color: #3e3e3e;
+}
+
+#clear-chat {
+    background-color: #e57373;
+}
+
+#clear-chat:hover {
+    background-color: #f44336;
 }
 
 .loading-indicator {

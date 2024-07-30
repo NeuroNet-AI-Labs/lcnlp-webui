@@ -1,4 +1,17 @@
 $(document).ready(function() {
+    // Load saved settings from local storage
+    const savedModel = localStorage.getItem('selectedModel');
+    const savedDevice = localStorage.getItem('selectedDevice');
+
+    if (savedModel) {
+        $('#model-selector').val(savedModel);
+        $('#selected-model').text(savedModel);
+    }
+    if (savedDevice) {
+        $('#device-selector').val(savedDevice);
+        $('#selected-device').text(savedDevice);
+    }
+
     // Load available devices
     $.get('/devices', function(data) {
         let deviceSelector = $('#device-selector');
@@ -21,6 +34,13 @@ $(document).ready(function() {
     $('#save-settings').click(function() {
         let modelName = $('#model-selector').val();
         let deviceId = $('#device-selector').val();
+
+        localStorage.setItem('selectedModel', modelName);
+        localStorage.setItem('selectedDevice', deviceId);
+
+        $('#selected-model').text(modelName);
+        $('#selected-device').text(deviceId);
+
         $.ajax({
             url: '/update_model',
             type: 'POST',
@@ -75,6 +95,11 @@ $(document).ready(function() {
                 }
             });
         }
+    });
+
+    // Clear chat history
+    $('#clear-chat').click(function() {
+        $('#chat-display').empty();
     });
 
     // Send message on enter key press
