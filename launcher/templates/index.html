@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LcNLP-Launcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="open-settings">Settings</button>
+        </div>
+        <div class="chat">
+            <div id="chat-display" class="chat-display"></div>
+            <div class="input-container">
+                <input type="text" id="input-field" placeholder="Type your message here...">
+                <button id="send-button">Send</button>
+            </div>
+            <div id="loading-indicator" class="loading-indicator" style="display: none;">Thinking...</div>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Settings</h2>
+            <div class="modal-body">
+                <label for="model-selector">Model:</label>
+                <select id="model-selector">
+                    <option value="gpt2">gpt2</option>
+                    <option value="gpt2-medium">gpt2-medium</option>
+                    <option value="gpt2-large">gpt2-large</option>
+                    <option value="gpt2-xl">gpt2-xl</option>
+                    <option value="EleutherAI/gpt-neo-1.3B">EleutherAI/gpt-neo-1.3B</option>
+                    <option value="EleutherAI/gpt-neo-2.7B">EleutherAI/gpt-neo-2.7B</option>
+                    <option value="EleutherAI/gpt-neo-125M">EleutherAI/gpt-neo-125M</option>
+                    <option value="EleutherAI/gpt-j-6B">EleutherAI/gpt-j-6B</option>
+                    <option value="distilgpt2">distilgpt2</option>
+                </select>
+
+                <label for="device-selector">Device:</label>
+                <select id="device-selector"></select>
+
+                <label for="max-length-spinner">Max Length:</label>
+                <input type="number" id="max-length-spinner" min="1" max="4096" value="50">
+
+                <label for="temperature-spinner">Temperature:</label>
+                <input type="number" id="temperature-spinner" step="0.1" min="0.1" max="2.0" value="1.0">
+
+                <label for="top-k-spinner">Top-k:</label>
+                <input type="number" id="top-k-spinner" min="0" max="100" value="50">
+
+                <label for="top-p-spinner">Top-p:</label>
+                <input type="number" id="top-p-spinner" step="0.05" min="0.0" max="1.0" value="0.95">
+
+                <label for="repetition-penalty-spinner">Repetition Penalty:</label>
+                <input type="number" id="repetition-penalty-spinner" step="0.1" min="1.0" max="2.0" value="1.0">
+            </div>
+            <button id="save-settings">Save</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

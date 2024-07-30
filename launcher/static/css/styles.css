@@ -1,0 +1,174 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    background-color: #2e2e2e;
+    padding: 10px;
+    text-align: right;
+}
+
+.header button {
+    background-color: #4e4e4e;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background-color: #5e5e5e;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #1e1e1e;
+}
+
+.chat-display {
+    flex-grow: 1;
+    background-color: #2e2e2e;
+    padding: 10px;
+    overflow-y: auto;
+    border-top: 1px solid #444;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #2e2e2e;
+    border-top: 1px solid #444;
+}
+
+#input-field {
+    flex-grow: 1;
+    background-color: #3e3e3e;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#send-button {
+    background-color: #4e4e4e;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #5e5e5e;
+}
+
+#send-button:active {
+    background-color: #3e3e3e;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 10px;
+    color: #7ee787;
+}
+
+.user-message, .ai-message {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #4e4e4e;
+    align-self: flex-end;
+}
+
+.ai-message {
+    background-color: #3e3e3e;
+    align-self: flex-start;
+}
+
+.user-message b, .ai-message b {
+    color: #7ee787;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #2e2e2e;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body label {
+    margin: 10px 0 5px;
+}
+
+.modal-body input,
+.modal-body select {
+    background-color: #3e3e3e;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
