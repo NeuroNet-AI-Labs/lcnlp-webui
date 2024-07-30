@@ -35,12 +35,15 @@ $(document).ready(function() {
         let modelName = $('#model-selector').val();
         let deviceId = $('#device-selector').val();
 
+        // Save settings to local storage
         localStorage.setItem('selectedModel', modelName);
         localStorage.setItem('selectedDevice', deviceId);
 
+        // Update the displayed model and device
         $('#selected-model').text(modelName);
         $('#selected-device').text(deviceId);
 
+        // Send requests to update model and device
         $.ajax({
             url: '/update_model',
             type: 'POST',
@@ -59,6 +62,8 @@ $(document).ready(function() {
                 console.log(response.status);
             }
         });
+
+        // Close the modal
         $('#settings-modal').hide();
     });
 
